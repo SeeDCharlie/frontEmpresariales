@@ -3,19 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DestinoModule } from './destino/destino.module';
-import { TipoDestinoComponent } from './tipos-destino/tipo-destino/tipo-destino.component';
-import { TiposDestinosModule } from './tipos-destino/tipos-destinos.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ErrorPageComponent } from './shared/error-page/error-page.component';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ErrorPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TiposDestinosModule,
-    DestinoModule
+    BrowserAnimationsModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
