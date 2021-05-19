@@ -1,0 +1,16 @@
+<h1>tipos destinos list</h1>
+<ul>
+    <li *ngFor="let tipoDestino of tiposDestinos;let i = index">tipo {{i+1}}: {{tipoDestino}}</li>
+</ul>
+
+<button (click)="borrarDestino()">Borrar destino</button>
+
+
+<div *ngIf="tipoDestinoEliminado else noEliminado" >
+    <h3>tipo destino eliminado : {{tipoDestinoEliminado}}</h3>
+</div>
+<ng-template #noEliminado>
+    <h3>No se ha eliminado ningun tipo destino</h3>
+</ng-template>
+
+
