@@ -1,1 +1,29 @@
-<p>home works!</p>
+<mat-sidenav-container fullscreen>
+
+    <mat-sidenav #sidenav>
+        <!--menu-->
+        <mat-toolbar>
+            <span>Menu</span>
+            <span></span>
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <span class="material-icons">
+                    menu
+                </span>
+            </button>
+        </mat-toolbar>
+
+        <mat-nav-list>
+            <mat-list-item routerLink="/home" role="listitem">Home</mat-list-item>
+            <mat-list-item routerLink="/destino" role="listitem">Gestionar Destino </mat-list-item>
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-toolbar>
+        <button mat-icon-button (click)="sidenav.toggle()">
+            <span class="material-icons">
+                menu
+            </span>
+        </button>
+    </mat-toolbar>
+
+</mat-sidenav-container>

@@ -21,6 +21,10 @@ const routes: Routes = [
     loadChildren: () => import('./tipos-destino/tipos-destino.module').then(m => m.TiposDestinoModule)
   },
   {
+    path:'',
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+  },
+  {
     path: '404',
     component: ErrorPageComponent
   },
