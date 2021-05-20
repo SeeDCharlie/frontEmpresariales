@@ -1,18 +1,18 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListadoComponent } from '../tipos-destino/pages/listado/listado.component';
 import { ConsultarDestinoComponent } from './pages/consultar-destino/consultar-destino.component';
 import { CrearDestinoComponent } from './pages/crear-destino/crear-destino.component';
 import { DetalleDestinoComponent } from './pages/detalle-destino/detalle-destino.component';
+import { ListadoDestinoComponent } from './pages/listado-destino/listado-destino.component';
 
 const routes: Routes = [
   {
     path:'',
-    component: ListadoComponent,
+    component: ListadoDestinoComponent,
     children:[
       {
         path:'listado',
-        component: ListadoComponent
+        component: ListadoDestinoComponent
       },
       {
         path:'crear',
@@ -32,7 +32,7 @@ const routes: Routes = [
       },
       {
         path:'**',
-        component: ListadoComponent
+        redirectTo: 'listado'
       }
     ]
   }

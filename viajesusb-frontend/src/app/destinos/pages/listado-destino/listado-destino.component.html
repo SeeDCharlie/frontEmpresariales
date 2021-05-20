@@ -1,1 +1,46 @@
-<p>listado-destino works!</p>
+<h1>Listado de Destinos</h1>
+<mat-divider></mat-divider>
+<br>
+
+<div flexLayout.xl="row wrap" fxLayout.sm="column" fxLayoutAlign.md="center" fxLayoutGap="20px" style="padding: 0 50px">
+
+    <div fxFlex="20" *ngFor="let destino of destinos">
+        <mat-card>
+            <mat-card-header>
+                Nombre Destino
+            </mat-card-header>
+            <mat-card-subtitle>
+                Codigo Destino
+            </mat-card-subtitle>
+        
+            <img mat-card-image src="../../../../assets/images/san-andres.jpg" alt="">
+        
+            <mat-card-content>
+                <h3>tipo destino: TIPO DESTINO</h3>
+                <p>
+                    <strong>acceso por aire </strong> SI
+                </p>
+                <p>
+                    <strong>acceso por tierra </strong> SI
+                </p>
+                <p>
+                    <strong>acceso por mar </strong> NO
+                </p>
+            </mat-card-content>
+        
+            <mat-card-actions>
+                <button mat-button color="warn">
+                    ELIMINAR
+                </button>
+                <button mat-button color="primary">
+                    EDITAR
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+
+
+    
+
+</div>
+

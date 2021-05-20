@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadoDestinoComponent implements OnInit {
 
+  public destinos:string [] = ["A","B","C","D","E","F","G"] 
+
   constructor() { }
 
   ngOnInit(): void {

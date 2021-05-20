@@ -13,7 +13,10 @@ import { MaterialModule } from '../material/material.module';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    MaterialModule
+    MaterialModule,
+  ],
+  exports: [
+    HomeComponent
   ]
 })
 export class HomeModule { }

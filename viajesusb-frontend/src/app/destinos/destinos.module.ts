@@ -6,6 +6,8 @@ import { CrearDestinoComponent } from './pages/crear-destino/crear-destino.compo
 import { ConsultarDestinoComponent } from './pages/consultar-destino/consultar-destino.component';
 import { DetalleDestinoComponent } from './pages/detalle-destino/detalle-destino.component';
 import { ListadoDestinoComponent } from './pages/listado-destino/listado-destino.component';
+import { MaterialModule } from '../material/material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { ListadoDestinoComponent } from './pages/listado-destino/listado-destino
   ],
   imports: [
     CommonModule,
-    DestinosRoutingModule
+    DestinosRoutingModule,
+    MaterialModule,
+    FlexLayoutModule
   ]
 })
 export class DestinosModule { }
