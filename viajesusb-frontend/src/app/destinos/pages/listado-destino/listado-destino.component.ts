@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Destino } from 'src/app/models/destino';
+import { DestinoService } from 'src/app/services/destino.service';
 
 @Component({
   selector: 'app-listado-destino',
@@ -7,11 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadoDestinoComponent implements OnInit {
 
-  public destinos:string [] = ["A","B","C","D","E","F","G"] 
+  public destinos:Destino[] = [] 
 
-  constructor() { }
+  constructor(private destinoService:DestinoService) { }
 
   ngOnInit(): void {
+    this.consultarDestinos()
+  }
+
+
+  consultarDestinos(){
+    this.destinoService.consultarDestinos().subscribe( resposeDestinos =>(this.destinos = resposeDestinos) )
   }
 
 }

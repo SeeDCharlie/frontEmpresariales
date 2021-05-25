@@ -1,1 +1,73 @@
-<p>crear-destino works!</p>
+<div fxLayout="row">
+
+    <div fxFlex="50">
+        <mat-form-field fxFlex="100">
+            <mat-label>
+                codigo
+            </mat-label>
+            <input matInput type="text" [(ngModel)]="destino.codigo" required>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="100">
+            <mat-label>
+                nombre
+            </mat-label>
+            <input matInput type="text" [(ngModel)]="destino.nombre" required>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="100">
+            <mat-label>
+                descripcion
+            </mat-label>
+            <textarea matInput type="text" [(ngModel)]="destino.descripcion" required></textarea>
+        </mat-form-field>
+
+        <mat-form-field fxFlex="100">
+            <mat-label>
+                tipo destino
+            </mat-label>
+            <mat-select [(ngModel)]="destino.codigo" required>
+                <mat-option *ngFor="let tipoDestino of tiposDestino" [value]="tipoDestino.codigo">
+                    {{tipoDestino.nombre}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field fxLayout="row" fxFlex="100">
+            <mat-label fxFlex="50">
+                tiene acceso por tierra
+            </mat-label>
+            <div fxFlex="50" [(ngModel)]="destino.tierra" >
+                <mat-radio-button value="s">SI</mat-radio-button>
+                <mat-radio-button value="n">NO</mat-radio-button>
+            </div>
+        </mat-form-field>
+        <mat-form-field fxLayout="row" fxFlex="100">
+            <mat-label fxFlex="50">
+                tiene acceso por aire
+            </mat-label>
+            <div fxFlex="50" [(ngModel)]="destino.aire" >
+                <mat-radio-button value="s">SI</mat-radio-button>
+                <mat-radio-button value="n">NO</mat-radio-button>
+            </div>
+        </mat-form-field>
+        <mat-form-field fxLayout="row" fxFlex="100">
+            <mat-label fxFlex="50">
+                tiene acceso por mar
+            </mat-label>
+            <div fxFlex="50" [(ngModel)]="destino.mar" >
+                <mat-radio-button value="s">SI</mat-radio-button>
+                <mat-radio-button value="n">NO</mat-radio-button>
+            </div>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" (click)="guardar()">
+            <mat-ico>save</mat-ico>
+            Guardar</button>
+    </div>
+
+    <div fxFlex="50">
+        {{destino | json}}
+    </div>
+
+</div>

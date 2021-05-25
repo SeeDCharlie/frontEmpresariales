@@ -6,10 +6,7 @@ import { DetalleDestinoComponent } from './pages/detalle-destino/detalle-destino
 import { ListadoDestinoComponent } from './pages/listado-destino/listado-destino.component';
 
 const routes: Routes = [
-  {
-    path:'',
-    component: ListadoDestinoComponent,
-    children:[
+  
       {
         path:'listado',
         component: ListadoDestinoComponent
@@ -31,11 +28,10 @@ const routes: Routes = [
         component: DetalleDestinoComponent
       },
       {
-        path:'**',
+        path:"**",
         redirectTo: 'listado'
       }
-    ]
-  }
+   
 ];
 
 @NgModule({

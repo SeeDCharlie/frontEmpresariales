@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 import { HomeModule } from './home/home.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HomeModule } from './home/home.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HomeModule
+    HomeModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

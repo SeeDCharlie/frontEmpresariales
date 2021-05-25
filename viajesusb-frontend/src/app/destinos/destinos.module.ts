@@ -21,7 +21,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CommonModule,
     DestinosRoutingModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
   ]
 })
 export class DestinosModule { }

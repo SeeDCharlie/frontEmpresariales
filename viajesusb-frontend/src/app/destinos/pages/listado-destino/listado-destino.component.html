@@ -1,4 +1,8 @@
 <h1>Listado de Destinos</h1>
+
+
+<button mat-button [routerLink]="['/destino/crear']" >Crear Destino</button>
+
 <mat-divider></mat-divider>
 <br>
 
@@ -7,24 +11,24 @@
     <div fxFlex="20" *ngFor="let destino of destinos">
         <mat-card>
             <mat-card-header>
-                Nombre Destino
+                {{destino.nombre}}
             </mat-card-header>
             <mat-card-subtitle>
-                Codigo Destino
+                {{destino.descripcion}}
             </mat-card-subtitle>
         
             <img mat-card-image src="../../../../assets/images/san-andres.jpg" alt="">
         
             <mat-card-content>
-                <h3>tipo destino: TIPO DESTINO</h3>
+                <h3>tipo destino: {{destino.tipoDestino}}</h3>
                 <p>
-                    <strong>acceso por aire </strong> SI
+                    <strong>acceso por aire </strong> {{destino.aire}}
                 </p>
                 <p>
-                    <strong>acceso por tierra </strong> SI
+                    <strong>acceso por tierra </strong> {{destino.tierra}}
                 </p>
                 <p>
-                    <strong>acceso por mar </strong> NO
+                    <strong>acceso por mar </strong> {{destino.mar}}
                 </p>
             </mat-card-content>
         
