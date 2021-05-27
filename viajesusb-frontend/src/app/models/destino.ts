@@ -1,3 +1,5 @@
+import { TipoDestino } from "./tipo-destino";
+
 export class Destino {
     idDest!: number;
     codigo!: string;
@@ -13,4 +15,5 @@ export class Destino {
     estado!: string;
     tipoDestinoId!: number;
     tipoDestinoCodigo!: string;
+    tipoDestino!: TipoDestino;
     } 

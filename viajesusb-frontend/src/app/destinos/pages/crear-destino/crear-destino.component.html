@@ -1,3 +1,11 @@
+
+<div fxLayout="row" class="formulario">
+    <h1 *ngIf="!destino.idDest">crear destino</h1>
+    <h1 *ngIf="destino.idDest">modificar destino</h1>
+</div>
+
+
+
 <div fxLayout="row" fxLayoutGap="40px">
 
     <div fxFlex="50" class="formulario" fxLayout="column">
@@ -38,8 +46,8 @@
                 tiene acceso por tierra?
             </mat-label>
             <mat-radio-group fxFlex="50" [(ngModel)]="destino.tierra" fxLayoutGap="20px">
-                <mat-radio-button value="s">SI</mat-radio-button>
-                <mat-radio-button value="n">NO</mat-radio-button>
+                <mat-radio-button value="S">SI</mat-radio-button>
+                <mat-radio-button value="N">NO</mat-radio-button>
             </mat-radio-group>
         </div>
         <div fxLayout="row" fxFlex="100">
@@ -47,8 +55,8 @@
                 tiene acceso por aire?
             </mat-label>
             <mat-radio-group fxFlex="50" [(ngModel)]="destino.aire" fxLayoutGap="20px">
-                <mat-radio-button value="s">SI</mat-radio-button>
-                <mat-radio-button value="n">NO</mat-radio-button>
+                <mat-radio-button value="S">SI</mat-radio-button>
+                <mat-radio-button value="N">NO</mat-radio-button>
             </mat-radio-group>
         </div>
         <div fxLayout="row" fxFlex="100">
@@ -56,8 +64,8 @@
                 tiene acceso por mar?
             </mat-label>
             <mat-radio-group fxFlex="50" [(ngModel)]="destino.mar" fxLayoutGap="20px">
-                <mat-radio-button value="s">SI</mat-radio-button>
-                <mat-radio-button value="n">NO</mat-radio-button>
+                <mat-radio-button value="S">SI</mat-radio-button>
+                <mat-radio-button value="N">NO</mat-radio-button>
             </mat-radio-group>
         </div>
 

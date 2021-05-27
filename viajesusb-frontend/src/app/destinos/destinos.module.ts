@@ -9,6 +9,7 @@ import { ListadoDestinoComponent } from './pages/listado-destino/listado-destino
 import { MaterialModule } from '../material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
+import { ConfirmarComponent } from './components/confirmar/confirmar.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     CrearDestinoComponent,
     ConsultarDestinoComponent,
     DetalleDestinoComponent,
-    ListadoDestinoComponent
+    ListadoDestinoComponent,
+    ConfirmarComponent
   ],
   imports: [
     CommonModule,
