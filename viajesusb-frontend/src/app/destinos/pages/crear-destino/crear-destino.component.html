@@ -1,6 +1,6 @@
-<div fxLayout="row">
+<div fxLayout="row" fxLayoutGap="40px">
 
-    <div fxFlex="50">
+    <div fxFlex="50" class="formulario" fxLayout="column">
         <mat-form-field fxFlex="100">
             <mat-label>
                 codigo
@@ -26,48 +26,50 @@
             <mat-label>
                 tipo destino
             </mat-label>
-            <mat-select [(ngModel)]="destino.codigo" required>
+            <mat-select [(ngModel)]="destino.tipoDestinoCodigo" required>
                 <mat-option *ngFor="let tipoDestino of tiposDestino" [value]="tipoDestino.codigo">
                     {{tipoDestino.nombre}}
                 </mat-option>
             </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxLayout="row" fxFlex="100">
+        <div fxLayout="row" fxFlex="100">
             <mat-label fxFlex="50">
-                tiene acceso por tierra
+                tiene acceso por tierra?
             </mat-label>
-            <div fxFlex="50" [(ngModel)]="destino.tierra" >
+            <mat-radio-group fxFlex="50" [(ngModel)]="destino.tierra" fxLayoutGap="20px">
                 <mat-radio-button value="s">SI</mat-radio-button>
                 <mat-radio-button value="n">NO</mat-radio-button>
-            </div>
-        </mat-form-field>
-        <mat-form-field fxLayout="row" fxFlex="100">
+            </mat-radio-group>
+        </div>
+        <div fxLayout="row" fxFlex="100">
             <mat-label fxFlex="50">
-                tiene acceso por aire
+                tiene acceso por aire?
             </mat-label>
-            <div fxFlex="50" [(ngModel)]="destino.aire" >
+            <mat-radio-group fxFlex="50" [(ngModel)]="destino.aire" fxLayoutGap="20px">
                 <mat-radio-button value="s">SI</mat-radio-button>
                 <mat-radio-button value="n">NO</mat-radio-button>
-            </div>
-        </mat-form-field>
-        <mat-form-field fxLayout="row" fxFlex="100">
+            </mat-radio-group>
+        </div>
+        <div fxLayout="row" fxFlex="100">
             <mat-label fxFlex="50">
-                tiene acceso por mar
+                tiene acceso por mar?
             </mat-label>
-            <div fxFlex="50" [(ngModel)]="destino.mar" >
+            <mat-radio-group fxFlex="50" [(ngModel)]="destino.mar" fxLayoutGap="20px">
                 <mat-radio-button value="s">SI</mat-radio-button>
                 <mat-radio-button value="n">NO</mat-radio-button>
-            </div>
-        </mat-form-field>
+            </mat-radio-group>
+        </div>
 
         <button mat-raised-button color="primary" (click)="guardar()">
-            <mat-ico>save</mat-ico>
+            <mat-icon>save</mat-icon>
             Guardar</button>
     </div>
 
     <div fxFlex="50">
-        {{destino | json}}
+        <h3>
+            {{destino | json}}
+        </h3>
     </div>
 
 </div>

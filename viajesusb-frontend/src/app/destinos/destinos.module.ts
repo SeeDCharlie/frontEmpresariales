@@ -8,6 +8,7 @@ import { DetalleDestinoComponent } from './pages/detalle-destino/detalle-destino
 import { ListadoDestinoComponent } from './pages/listado-destino/listado-destino.component';
 import { MaterialModule } from '../material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     DestinosRoutingModule,
     MaterialModule,
     FlexLayoutModule,
+    FormsModule
   ]
 })
 export class DestinosModule { }

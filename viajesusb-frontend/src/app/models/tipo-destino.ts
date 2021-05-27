@@ -4,8 +4,8 @@ export interface TipoDestino {
     nombre:            string;
     descripcion:       string;
     fechaCreacion:     Date;
-    fechaModificacion: null;
+    fechaModificacion: Date;
     usuCreador:        string;
-    usuModificador:    null;
+    usuModificador:    string;
     estado:            string;
 }

@@ -13,8 +13,8 @@ export class TipoDestinoService {
 
   constructor(private http: HttpClient) { }
 
-  consultarTipoDestino(): Observable<TipoDestino>{
-    return this.http.get<TipoDestino>(this.baseUrl+'/api/tipoDestino/getTiposDestino')
+  consultarTipoDestino(): Observable<TipoDestino[]>{
+    return this.http.get<TipoDestino[]>(this.baseUrl+'/api/tipoDestino/getTiposDestino')
   }
 
 
