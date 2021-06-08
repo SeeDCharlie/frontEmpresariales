@@ -34,8 +34,8 @@
             <mat-label>
                 tipo destino
             </mat-label>
-            <mat-select [(ngModel)]="destino.tipoDestinoCodigo" required>
-                <mat-option *ngFor="let tipoDestino of tiposDestino" [value]="tipoDestino.codigo">
+            <mat-select [(ngModel)]="destino.tipoDestino" required>
+                <mat-option *ngFor="let tipoDestino of tiposDestino" [value]="tipoDestino">
                     {{tipoDestino.nombre}}
                 </mat-option>
             </mat-select>

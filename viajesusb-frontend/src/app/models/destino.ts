@@ -13,7 +13,6 @@ export class Destino {
     usuCreador!: string;
     usuModificador?: string;
     estado!: string;
-    tipoDestinoId!: number;
-    tipoDestinoCodigo!: string;
     tipoDestino!: TipoDestino;
-    } 
+    tipoDestinoCodigo!: string;
+} 

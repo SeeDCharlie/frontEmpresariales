@@ -40,6 +40,7 @@ export class ListadoDestinoComponent implements OnInit {
           this.destinoService.eliminarDestino(destino.idDest).subscribe(
             resp => {
               this.snack.open("destino eliminado satisfactoriamente", 'X', {duration:3000})
+              
             }
           )
         }
