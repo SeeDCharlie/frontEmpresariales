@@ -8,7 +8,8 @@ import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    
   ],
   imports: [
     CommonModule,

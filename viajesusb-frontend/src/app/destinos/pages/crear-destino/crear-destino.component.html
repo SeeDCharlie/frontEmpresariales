@@ -1,4 +1,3 @@
-
 <div fxLayout="row" class="formulario">
     <h1 *ngIf="!destino.idDest">crear destino</h1>
     <h1 *ngIf="destino.idDest">modificar destino</h1>
@@ -71,7 +70,8 @@
 
         <button mat-raised-button color="primary" (click)="guardar()">
             <mat-icon>save</mat-icon>
-            Guardar</button>
+            Guardar
+        </button>
     </div>
 
     <div fxFlex="50">
