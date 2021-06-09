@@ -5,23 +5,31 @@ import { ErrorPageComponent } from './shared/error-page/error-page.component';
 const routes: Routes = [
 
   {
-    path:'home',
+    path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   },
   {
-    path:'auth',
+    path: 'auth',
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
   },
   {
-    path:'destino',
+    path: 'destino',
     loadChildren: () => import('./destinos/destinos.module').then(m => m.DestinosModule)
   },
   {
-    path:'tipo-destino',
+    path: 'tipo-destino',
     loadChildren: () => import('./tipos-destino/tipos-destino.module').then(m => m.TiposDestinoModule)
   },
   {
-    path:'',
+    path: 'clientes',
+    loadChildren: () => import('./clientes/clientes.module').then(m => m.ClientesModule)
+  },
+  {
+    path: 'tipos-identificacion',
+    loadChildren: () => import('./tipos-identificacion/tipos-identificacion.module').then(m => m.TiposIdentificacionModule)
+  },
+  {
+    path: '',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   },
   {
@@ -29,10 +37,10 @@ const routes: Routes = [
     component: ErrorPageComponent
   },
   {
-    path:'**',
-    redirectTo:'404'
+    path: '**',
+    redirectTo: '404'
   }
-  
+
 ];
 
 @NgModule({

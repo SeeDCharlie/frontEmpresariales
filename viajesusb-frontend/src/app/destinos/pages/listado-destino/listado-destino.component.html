@@ -1,12 +1,34 @@
-<h1>Listado de Destinos</h1>
+<mat-card fxLayout="row" style="margin: 50px;" layout-align="center center">
+    <h2 fxLayout="column" fxFlex="40" style="-webkit-text-stroke: 1px rgb(32, 4, 133);font-weight: 650;font-size: 2rem; justify-content: flex-end; color: rgb(247, 247, 247);">
+        Listado de Destinos</h2>
 
+    <div fxLayout="column" fxFlex="40" >
+        <div fxLayout="row"  fxLayoutGap="20px" layout-align="center center">
+            <mat-form-field fxLayout="column" class="example-form-field">
+                <mat-label>Buscar</mat-label>
+                <input matInput type="text">
+                <button matSuffix mat-icon-button aria-label="Clear">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+            <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                <mat-icon>search</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div fxLayout="column" fxFlex="20" style="justify-content: center;">
+        <button  mat-raised-button color="primary" [routerLink]="['/destino/crear']">
+            <mat-icon>add_circle</mat-icon> Crear Destino
+        </button>
+    </div>
+    
+</mat-card>
 
-<button mat-button [routerLink]="['/destino/crear']" >Crear Destino</button>
 
 <mat-divider></mat-divider>
 <br>
 
-<div flexLayout.xl="row wrap" fxLayout.sm="column" fxLayoutAlign.md="center" fxLayoutGap="20px" style="padding: 0 50px">
+<div fxLayout.xl="row wrap" fxLayout.sm="column" fxLayoutAlign.md="center" fxLayoutGap="20px" style="padding: 0 50px">
 
     <div fxFlex="20" *ngFor="let destino of destinos">
         <mat-card>
@@ -16,9 +38,9 @@
             <mat-card-subtitle>
                 {{destino.descripcion}}
             </mat-card-subtitle>
-        
+
             <img mat-card-image src="../../../../assets/images/san-andres.jpg" alt="">
-        
+
             <mat-card-content>
                 <h3>tipo destino: {{destino.tipoDestino.nombre}}</h3>
                 <p>
@@ -31,12 +53,12 @@
                     <strong>acceso por mar </strong> {{destino.mar}}
                 </p>
             </mat-card-content>
-        
+
             <mat-card-actions>
-                <button mat-button color="warn" (click)="eliminar(destino)" >
+                <button mat-button color="warn" (click)="eliminar(destino)">
                     ELIMINAR
                 </button>
-                <button mat-button color="primary" [routerLink]="['/destino/editar',destino.idDest]" >
+                <button mat-button color="primary" [routerLink]="['/destino/editar',destino.idDest]">
                     EDITAR
                 </button>
             </mat-card-actions>
@@ -44,7 +66,8 @@
     </div>
 
 
-    
+
 
 </div>
-
+<br>
+<br>

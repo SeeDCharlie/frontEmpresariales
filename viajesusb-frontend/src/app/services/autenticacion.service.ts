@@ -10,7 +10,7 @@ import { Usuario } from '../models/usuario';
 export class AutenticacionService {
 
   private baseUrl: string = environment.baseUrl
-  public usuarioAuth!: Usuario;
+  public usuarioAuth?: Usuario;
 
   constructor(private http: HttpClient) { }
 

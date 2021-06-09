@@ -15,19 +15,39 @@
                 <mat-icon mat-list-icon>arrow_right</mat-icon>
                 Home
             </mat-list-item>
-            <mat-list-item routerLink="/destino" role="listitem" (click)="sidenav.toggle()">
-                <mat-icon mat-list-icon>arrow_right</mat-icon>
-                Gestionar Destino
-            </mat-list-item>
-            <mat-list-item routerLink="/tipo-destino" role="listitem" (click)="sidenav.toggle()">
-                <mat-icon mat-list-icon>arrow_right</mat-icon>
-                Gestionar Tipo Destino
-            </mat-list-item>
-            <mat-list-item routerLink="/auth" role="listitem" (click)="sidenav.toggle()">
-                <mat-icon mat-list-icon>arrow_right</mat-icon>
-                Login
-            </mat-list-item>
+            <ng-container *ngIf="autenticacionServce.usuarioAuth">
+                <mat-list-item routerLink="/destino" role="listitem" (click)="sidenav.toggle()">
+                    <mat-icon mat-list-icon>arrow_right</mat-icon>
+                    Gestionar Destino
+                </mat-list-item>
+                <mat-list-item routerLink="/tipo-destino" role="listitem" (click)="sidenav.toggle()">
+                    <mat-icon mat-list-icon>arrow_right</mat-icon>
+                    Gestionar Tipo Destino
+                </mat-list-item>
+
+                <mat-list-item routerLink="/clientes" role="listitem" (click)="sidenav.toggle()">
+                    <mat-icon mat-list-icon>arrow_right</mat-icon>
+                    Clientes
+                </mat-list-item>
+                <mat-list-item routerLink="/tipos-identificacion" role="listitem" (click)="sidenav.toggle()">
+                    <mat-icon mat-list-icon>arrow_right</mat-icon>
+                    Tipos Indentificacion
+                </mat-list-item>
+
+                <mat-list-item routerLink="/auth" role="listitem" (click)="logout();sidenav.toggle()">
+                    <mat-icon mat-list-icon>arrow_right</mat-icon>
+                    LogOut
+                </mat-list-item>
+            </ng-container>
+            <ng-container *ngIf="!autenticacionServce.usuarioAuth" >
+                <mat-list-item routerLink="/auth" role="listitem" (click)="sidenav.toggle()">
+                    <mat-icon mat-list-icon>arrow_right</mat-icon>
+                    Login
+                </mat-list-item>
+
+            </ng-container>
             
+
         </mat-nav-list>
     </mat-sidenav>
 
