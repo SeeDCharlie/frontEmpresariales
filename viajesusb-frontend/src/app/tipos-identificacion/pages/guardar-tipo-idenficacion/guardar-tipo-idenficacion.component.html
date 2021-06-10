@@ -1,1 +1,54 @@
-<p>guardar-tipo-idenficacion works!</p>
+<div fxLayout.sm="row" style="margin: 30px 10%;">
+    <div fxLayout.sm="row" style="margin: 40px 5px; width: 70%;">
+        <p
+            style="color: blue; text-shadow: 2px 2px #ff0000;font-size: 3rem; font-weight: 700; -webkit-text-stroke: 1px rgb(32, 4, 133);">
+            Crear Tipo Identificacion
+        </p>
+    </div>
+    <hr>
+    <mat-card class="example-form" fxLayout.sm="row">
+
+        <div fxLayout.sm="row">
+            <div fxLayout.sm="row" fxLayoutGap="15px">
+                <div fxLayout="column" fxFlex="50">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Codigo</mat-label>
+                        <input matInput required [(ngModel)]="newTipoIdentificacion.codigo">
+                    </mat-form-field>
+                </div>
+                <div fxLayout="column" fxFlex="50">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput required [(ngModel)]="newTipoIdentificacion.nombre">
+                    </mat-form-field>
+                </div>
+                
+            </div>
+
+        </div>
+        <div fxLayout="row">
+            <div fxLayout="column" fxFlex="33">
+                <mat-label fxFlex="100">
+                    Estado
+                </mat-label>
+                <mat-radio-group fxFlex="50" [(ngModel)]="newTipoIdentificacion.estado" fxLayoutGap="20px">
+                    <mat-radio-button value="A">Activo (A)</mat-radio-button>
+                    <mat-radio-button value="I">Inactivo (I)</mat-radio-button>
+                </mat-radio-group>
+            </div>
+        </div>
+
+    </mat-card>
+
+    <div fxLayout.sm="row" fxLayoutGap="20px" style="margin: 20px 5px; width: 100%;">
+        <button mat-raised-button fxLayout.sm="column" color="warn" fxFlex="50" routerLink="/tipos-identificacion">
+            <mat-icon>keyboard_return</mat-icon> Cancelar
+        </button>
+
+        <button mat-raised-button fxLayout.sm="column" color="primary" fxFlex="50" (click)="guardar()">
+            <mat-icon>save</mat-icon> Guardar
+        </button>
+    </div>
+
+
+</div>

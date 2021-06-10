@@ -1,1 +1,143 @@
-<p>guardar-cliente works!</p>
+<div fxLayout.sm="row" style="margin: 30px 10%;">
+    <div fxLayout.sm="row" style="margin: 40px 5px; width: 70%;">
+        <p
+            style="color: blue; text-shadow: 2px 2px #ff0000;font-size: 3rem; font-weight: 700; -webkit-text-stroke: 1px rgb(32, 4, 133);">
+            Crear Cliente
+        </p>
+    </div>
+    <hr>
+    <mat-card class="example-form" fxLayout.sm="row">
+
+        <div fxLayout.sm="row">
+            <div fxLayout.sm="row" fxLayoutGap="15px">
+                <div fxLayout="column" fxFlex="50">
+                    <mat-form-field class="example-full-width">
+                        <mat-label fxFlex="100">
+                            Email
+                        </mat-label>
+                        <input matInput required [(ngModel)]="newCliente.correo">
+                    </mat-form-field>
+                </div>
+                
+                <div fxLayout="column" fxFlex="50">
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput required [(ngModel)]="newCliente.nombre">
+                    </mat-form-field>
+                </div>
+
+            </div>
+
+        </div>
+        <div fxLayout="row" fxLayoutGap="15px">
+            <div fxLayout="column" fxFlex="50">
+                <mat-form-field class="example-full-width">
+                    <mat-label fxFlex="100">
+                        Primer Apellido
+                    </mat-label>
+                    <input matInput required [(ngModel)]="newCliente.primerApellido">
+                </mat-form-field>
+            </div>
+            <div fxLayout="column" fxFlex="50">
+                <mat-form-field>
+                    <mat-label fxFlex="100">
+                        Segundo Apellido
+                    </mat-label>
+                    <input matInput required [(ngModel)]="newCliente.segundoApellido">
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="15px">
+            <div fxLayout="column" fxFlex="50">
+                <mat-form-field class="example-full-width">
+                    <mat-label fxFlex="100">
+                        telefono1
+                    </mat-label>
+                    <input matInput required [(ngModel)]="newCliente.telefono1">
+                </mat-form-field>
+            </div>
+            <div fxLayout="column" fxFlex="50">
+                <mat-form-field>
+                    <mat-label fxFlex="100">
+                        telefono2
+                    </mat-label>
+                    <input matInput required [(ngModel)]="newCliente.telefono2">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div fxLayout="row" fxLayoutGap="15px">
+            <div fxLayout="column" fxFlex="50">
+
+                <mat-label fxFlex="100">
+                    Estado
+                </mat-label>
+                <mat-radio-group fxFlex="50" [(ngModel)]="newCliente.estado" fxLayoutGap="20px">
+                    <mat-radio-button value="A">Activo (A)</mat-radio-button>
+                    <mat-radio-button value="I">Inactivo (I)</mat-radio-button>
+                </mat-radio-group>
+
+            </div>
+            
+            <div fxLayout="column" fxFlex="50">
+
+                <mat-label fxFlex="100">
+                    Sexo
+                </mat-label>
+                <mat-radio-group fxFlex="50" [(ngModel)]="newCliente.sexo" fxLayoutGap="20px">
+                    <mat-radio-button value="F">Femenino (F)</mat-radio-button>
+                    <mat-radio-button value="M">Masculino (M)</mat-radio-button>
+                </mat-radio-group>
+
+            </div>
+        </div>
+
+        <div fxLayout="row" fxLayoutGap="15px" style="margin-top: 15px;">
+
+            <div fxLayout="column" fxFlex="100">
+                <mat-form-field appearance="fill">
+                    <mat-label>Fecha de Nacimiento</mat-label>
+                    <input matInput [matDatepicker]="picker" [(ngModel)]="newCliente.fechaNacimiento">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div fxLayout="row" fxLayoutGap="15px">
+
+            
+            <mat-form-field fxFlex="50">
+                <mat-label>
+                    Tipo Identificacion
+                </mat-label>
+                <mat-select [(ngModel)]="newCliente.tipoIdentificacion" required>
+                    <mat-option *ngFor="let tipoIdent of tiposIdentificacion" [value]="tipoIdent.idTiid">
+                        {{tipoIdent.nombre}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+
+            <div fxLayout="column" fxFlex="50">
+                <mat-form-field class="example-full-width">
+                    <mat-label>No. Identificacion</mat-label>
+                    <input matInput required [(ngModel)]="newCliente.numeroIdentificacion">
+                </mat-form-field>
+            </div>
+
+        </div>
+
+    </mat-card>
+
+    <div fxLayout.sm="row" fxLayoutGap="20px" style="margin: 20px 5px; width: 100%;">
+        <button mat-raised-button fxLayout.sm="column" color="warn" fxFlex="50" routerLink="/clientes">
+            <mat-icon>keyboard_return</mat-icon> Cancelar
+        </button>
+
+        <button mat-raised-button fxLayout.sm="column" color="primary" fxFlex="50" (click)="guardar()">
+            <mat-icon>save</mat-icon> Guardar
+        </button>
+    </div>
+
+
+</div>

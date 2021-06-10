@@ -31,7 +31,7 @@ export class ClienteService {
   }
   
   eliminarCliente(id:number):Observable<any>{
-    return this.http.delete<any>(this.baseUrl+'/api/cliente/eliminarClientePorId?idCli='+id)
+    return this.http.delete<any>(this.baseUrl+'/api/cliente/eliminarClientePorId?idCliente='+id)
   }
 
 }

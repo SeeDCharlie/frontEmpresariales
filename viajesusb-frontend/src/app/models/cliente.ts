@@ -16,6 +16,6 @@ export class Cliente {
     usuCreador!: string;
     usuModificador!: string;
     estado!: string;
-    tipoIdentificacion!: TipoIdentificacion;
+    tipoIdentificacion!: any;
 
 }
