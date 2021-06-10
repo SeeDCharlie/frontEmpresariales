@@ -1,0 +1,15 @@
+.example-form {
+    background-color: #5079ff;
+}
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  tr{
+      width: 100%;
+  }
+  
+  td {
+    padding-right: 8px;
+  }

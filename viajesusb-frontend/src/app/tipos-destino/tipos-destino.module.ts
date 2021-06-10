@@ -7,12 +7,14 @@ import { DetalleTipoDestinoComponent } from './pages/detalle-tipo-destino/detall
 import { MaterialModule } from '../material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
+import { CrearTipoDestinoComponent } from './pages/crear-tipo-destino/crear-tipo-destino.component';
 
 
 @NgModule({
   declarations: [
     ListadoComponent,
-    DetalleTipoDestinoComponent
+    DetalleTipoDestinoComponent,
+    CrearTipoDestinoComponent
   ],
   imports: [
     CommonModule,
