@@ -31,7 +31,7 @@ export class ListadoDestinoComponent implements OnInit {
   eliminar(destino:Destino){
 
     const dialog = this.dialog.open(
-      ConfirmarComponent, {width:'250px', data:destino}
+      ConfirmarComponent, {width:'250px', data:{titulo:"Confirmacion",mensaje:"Seguro quiere eliminar el destino"}}
     )
 
     dialog.afterClosed().subscribe(

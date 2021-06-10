@@ -1,8 +1,8 @@
 <div >
 
-    <h1>Confirmacion</h1>
+    <h1>{{data.titulo}}</h1>
     <p>
-        Esta seguro que desea eliminar el destino
+        {{data.mensaje}}
     </p>
     <div fxLayout="row" fxLayoutGap="20px">
         <button fxFlex="50" mat-raised-button color="warn" (click)="eliminar()">Ok</button>
